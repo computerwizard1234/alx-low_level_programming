@@ -1,20 +1,32 @@
-#include <stdio.h>
-/**
- * main - Prints numbers between 0 to 9 and letters between a to f.
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-	int i;
+#include "main.h"
 
-	for (i = 48; i < 58; i++)
+/**
+ * jack_bauer - Prints the minutes of a day
+ *
+ * Return: no return
+ */
+void jack_bauer(void)
+{
+	int a, b, c, d;
+
+	for (a = 48; a <= 50; a++)
 	{
-		putchar(i);
+		for (b = 48; b <= 57; b++)
+		{
+			for (c = 48; c <= 53; c++)
+			{
+				for (d = 48; d <= 57; d++)
+				{
+					if (a >= 50 && b >= 52)
+						break;
+					_putchar(a);
+					_putchar(b);
+					_putchar(58);
+					_putchar(c);
+					_putchar(d);
+					_putchar('\n');
+				}
+			}
+		}
 	}
-	for (i = 97; i < 103; i++)
-	{
-		putchar(i);
-	}
-	putchar('\n');
-	return (0);
 }

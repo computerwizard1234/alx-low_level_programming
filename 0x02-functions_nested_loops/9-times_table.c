@@ -1,22 +1,33 @@
-#include <stdio.h>
-/**
- * main - Prints numbers between 0 to 9 with commas and spaces.
- *
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-	int i;
+#include "main.h"
 
-	for (i = 48; i < 58; i++)
+/**
+ * times_table - Prints the 9 times table
+ * Author Mgasa Lucas
+ * Return: no return
+ */
+void times_table(void)
+{
+	int a, b, op;
+
+	for (a = 0; a <= 9; a++)
 	{
-		putchar(i);
-		if (i != 57)
+		_putchar(48);
+		for (b = 1; b <= 9; b++)
 		{
-			putchar(',');
-			putchar(' ');
+			op = a * b;
+			_putchar(44);
+			_putchar(32);
+			if (op <= 9)
+			{
+				_putchar(32);
+				_putchar(op + 48);
+			}
+			else
+			{
+				_putchar((op / 10) + 48);
+				_putchar((op % 10) + 48);
+			}
 		}
+		_putchar('\n');
 	}
-	putchar('\n');
-	return (0);
 }
